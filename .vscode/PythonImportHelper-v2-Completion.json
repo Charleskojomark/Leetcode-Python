@@ -1,0 +1,171 @@
+[
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "is_anagram",
+        "kind": 2,
+        "importPath": "anagram",
+        "description": "anagram",
+        "peekOfCode": "def is_anagram(s: str, t: str) -> bool:\n    return sorted(s) == sorted(t)\ns = \"anagram\"\nt = \"nagaram\"\ns = \"rat\"\nt = \"car\"\nprint(is_anagram(s, t))\ndef is_anagram_v2(s: str, t: str) -> bool:\n    if len(s) != len(t):\n        return False",
+        "detail": "anagram",
+        "documentation": {}
+    },
+    {
+        "label": "is_anagram_v2",
+        "kind": 2,
+        "importPath": "anagram",
+        "description": "anagram",
+        "peekOfCode": "def is_anagram_v2(s: str, t: str) -> bool:\n    if len(s) != len(t):\n        return False\n    count = {}\n    for char in s:\n        count[char] = count.get(char, 0) + 1\n    for char in t:\n        if not char in count:\n            return False\n        count[char] -= 1",
+        "detail": "anagram",
+        "documentation": {}
+    },
+    {
+        "label": "s",
+        "kind": 5,
+        "importPath": "anagram",
+        "description": "anagram",
+        "peekOfCode": "s = \"anagram\"\nt = \"nagaram\"\ns = \"rat\"\nt = \"car\"\nprint(is_anagram(s, t))\ndef is_anagram_v2(s: str, t: str) -> bool:\n    if len(s) != len(t):\n        return False\n    count = {}\n    for char in s:",
+        "detail": "anagram",
+        "documentation": {}
+    },
+    {
+        "label": "t",
+        "kind": 5,
+        "importPath": "anagram",
+        "description": "anagram",
+        "peekOfCode": "t = \"nagaram\"\ns = \"rat\"\nt = \"car\"\nprint(is_anagram(s, t))\ndef is_anagram_v2(s: str, t: str) -> bool:\n    if len(s) != len(t):\n        return False\n    count = {}\n    for char in s:\n        count[char] = count.get(char, 0) + 1",
+        "detail": "anagram",
+        "documentation": {}
+    },
+    {
+        "label": "s",
+        "kind": 5,
+        "importPath": "anagram",
+        "description": "anagram",
+        "peekOfCode": "s = \"rat\"\nt = \"car\"\nprint(is_anagram(s, t))\ndef is_anagram_v2(s: str, t: str) -> bool:\n    if len(s) != len(t):\n        return False\n    count = {}\n    for char in s:\n        count[char] = count.get(char, 0) + 1\n    for char in t:",
+        "detail": "anagram",
+        "documentation": {}
+    },
+    {
+        "label": "t",
+        "kind": 5,
+        "importPath": "anagram",
+        "description": "anagram",
+        "peekOfCode": "t = \"car\"\nprint(is_anagram(s, t))\ndef is_anagram_v2(s: str, t: str) -> bool:\n    if len(s) != len(t):\n        return False\n    count = {}\n    for char in s:\n        count[char] = count.get(char, 0) + 1\n    for char in t:\n        if not char in count:",
+        "detail": "anagram",
+        "documentation": {}
+    },
+    {
+        "label": "contains_duplicate",
+        "kind": 2,
+        "importPath": "contains_duplicate",
+        "description": "contains_duplicate",
+        "peekOfCode": "def contains_duplicate(nums: List[int]) -> bool:\n    new_set = set(nums)\n    if len(nums) == len(new_set):\n        return False\n    return True\nnums = [1,2,3,1]\nprint(contains_duplicate(nums))\ndef contains_duplicate_v2(nums: List[int]) -> bool:\n    count = {}\n    for num in nums:",
+        "detail": "contains_duplicate",
+        "documentation": {}
+    },
+    {
+        "label": "contains_duplicate_v2",
+        "kind": 2,
+        "importPath": "contains_duplicate",
+        "description": "contains_duplicate",
+        "peekOfCode": "def contains_duplicate_v2(nums: List[int]) -> bool:\n    count = {}\n    for num in nums:\n        if num in count:\n            count[num] += 1\n            return True\n        else:\n            count[num] = 1\n    return False\nprint(contains_duplicate_v2(nums))",
+        "detail": "contains_duplicate",
+        "documentation": {}
+    },
+    {
+        "label": "nums",
+        "kind": 5,
+        "importPath": "contains_duplicate",
+        "description": "contains_duplicate",
+        "peekOfCode": "nums = [1,2,3,1]\nprint(contains_duplicate(nums))\ndef contains_duplicate_v2(nums: List[int]) -> bool:\n    count = {}\n    for num in nums:\n        if num in count:\n            count[num] += 1\n            return True\n        else:\n            count[num] = 1",
+        "detail": "contains_duplicate",
+        "documentation": {}
+    },
+    {
+        "label": "two_sum",
+        "kind": 2,
+        "importPath": "two_sum",
+        "description": "two_sum",
+        "peekOfCode": "def two_sum(nums: List[int], target: int) -> int:\n    for i in range(len(nums)):\n        for j in range(1, len(nums)):\n            if nums[i] + nums[j] == target:\n                return [i, j]\nnums = [2,7,11,15] \ntarget = 9\nnums = [3,2,4]\ntarget = 6\nnums = [3,3]",
+        "detail": "two_sum",
+        "documentation": {}
+    },
+    {
+        "label": "two_sum_v2",
+        "kind": 2,
+        "importPath": "two_sum",
+        "description": "two_sum",
+        "peekOfCode": "def two_sum_v2(nums: List[int], target: int):\n    seen = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in seen:\n            return [seen[complement], i]\n        seen[num] = i\nprint(two_sum_v2(nums, target))",
+        "detail": "two_sum",
+        "documentation": {}
+    },
+    {
+        "label": "nums",
+        "kind": 5,
+        "importPath": "two_sum",
+        "description": "two_sum",
+        "peekOfCode": "nums = [2,7,11,15] \ntarget = 9\nnums = [3,2,4]\ntarget = 6\nnums = [3,3]\ntarget = 6\nprint(two_sum(nums, target))\ndef two_sum_v2(nums: List[int], target: int):\n    seen = {}\n    for i, num in enumerate(nums):",
+        "detail": "two_sum",
+        "documentation": {}
+    },
+    {
+        "label": "target",
+        "kind": 5,
+        "importPath": "two_sum",
+        "description": "two_sum",
+        "peekOfCode": "target = 9\nnums = [3,2,4]\ntarget = 6\nnums = [3,3]\ntarget = 6\nprint(two_sum(nums, target))\ndef two_sum_v2(nums: List[int], target: int):\n    seen = {}\n    for i, num in enumerate(nums):\n        complement = target - num",
+        "detail": "two_sum",
+        "documentation": {}
+    },
+    {
+        "label": "nums",
+        "kind": 5,
+        "importPath": "two_sum",
+        "description": "two_sum",
+        "peekOfCode": "nums = [3,2,4]\ntarget = 6\nnums = [3,3]\ntarget = 6\nprint(two_sum(nums, target))\ndef two_sum_v2(nums: List[int], target: int):\n    seen = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in seen:",
+        "detail": "two_sum",
+        "documentation": {}
+    },
+    {
+        "label": "target",
+        "kind": 5,
+        "importPath": "two_sum",
+        "description": "two_sum",
+        "peekOfCode": "target = 6\nnums = [3,3]\ntarget = 6\nprint(two_sum(nums, target))\ndef two_sum_v2(nums: List[int], target: int):\n    seen = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in seen:\n            return [seen[complement], i]",
+        "detail": "two_sum",
+        "documentation": {}
+    },
+    {
+        "label": "nums",
+        "kind": 5,
+        "importPath": "two_sum",
+        "description": "two_sum",
+        "peekOfCode": "nums = [3,3]\ntarget = 6\nprint(two_sum(nums, target))\ndef two_sum_v2(nums: List[int], target: int):\n    seen = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in seen:\n            return [seen[complement], i]\n        seen[num] = i",
+        "detail": "two_sum",
+        "documentation": {}
+    },
+    {
+        "label": "target",
+        "kind": 5,
+        "importPath": "two_sum",
+        "description": "two_sum",
+        "peekOfCode": "target = 6\nprint(two_sum(nums, target))\ndef two_sum_v2(nums: List[int], target: int):\n    seen = {}\n    for i, num in enumerate(nums):\n        complement = target - num\n        if complement in seen:\n            return [seen[complement], i]\n        seen[num] = i\nprint(two_sum_v2(nums, target))",
+        "detail": "two_sum",
+        "documentation": {}
+    }
+]
